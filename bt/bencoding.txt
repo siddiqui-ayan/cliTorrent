@@ -1,0 +1,8 @@
+**The Bencoding Format**
+
+| Data Type      | Prefix     | Format            | Example                    | Meaning                            |
+| -------------- | ---------- | ----------------- | -------------------------- | ---------------------------------- |
+| **String**     | *(length)* | `<length>:<data>` | `4:spam`                   | `"spam"`                           |
+| **Integer**    | `i`        | `i<number>e`      | `i42e`                     | `42`                               |
+| **List**       | `l`        | `l<items>e`       | `l4:spam4:eggse`           | `["spam", "eggs"]`                 |
+| **Dictionary** | `d`        | `d<key><value>e`  | `d3:cow3:moo4:spam4:eggse` | `{ "cow": "moo", "spam": "eggs" }` |

@@ -1,0 +1,15 @@
+**TABLE FOR ME TO UNDERSTAND THE MESSAGES IN THE PEER MESSAGING PROTOCOL**
+
+| Message ID | Message Name       | Payload                              | Description                                                         |
+| ---------- | ------------------ | ------------------------------------ | ------------------------------------------------------------------- |
+| —          | **Keep-Alive**     | None                                 | Sent periodically to keep the connection open. Length prefix = `0`. |
+| 0          | **Choke**          | None                                 | Sender will not upload pieces to the receiver.                      |
+| 1          | **Unchoke**        | None                                 | Sender allows receiver to request pieces.                           |
+| 2          | **Interested**     | None                                 | Peer is interested in downloading pieces.                           |
+| 3          | **Not Interested** | None                                 | Peer is not interested in downloading pieces.                       |
+| 4          | **Have**           | `piece index (4 bytes)`              | Indicates the peer has downloaded a specific piece.                 |
+| 5          | **Bitfield**       | `bitfield`                           | Bitmap showing which pieces the peer has.                           |
+| 6          | **Request**        | `index (4) + begin (4) + length (4)` | Request a block from a piece.                                       |
+| 7          | **Piece**          | `index (4) + begin (4) + block`      | Actual data block being sent.                                       |
+| 8          | **Cancel**         | `index (4) + begin (4) + length (4)` | Cancel a previously requested block.                                |
+| 9          | **Port**           | `listen-port (2 bytes)`              | Used for DHT support.                                               |
