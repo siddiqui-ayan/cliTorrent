@@ -5,7 +5,7 @@
 <h1 align="center">cliTorrent 🧲</h1>
 
 <p>
-cliTorrent is a minimal async BitTorrent client built from scratch — handling peer connections, trackers (HTTP/UDP), and piece verification — all inside a terminal.
+cliTorrent is a minimal async BitTorrent client built from scratch - handling peer connections, trackers (HTTP/UDP), and piece verification - all inside a terminal.
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@ cliTorrent is a minimal async BitTorrent client built from scratch — handling 
 
 
 ## Demo
-Live demo of the client downloading a torrent file
+Live demo of the client downloading a Torrent file
 
 <img src="images/demo.gif" alt="Demo" />
 
